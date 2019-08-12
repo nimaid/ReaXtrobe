@@ -625,12 +625,12 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <packageinstance name="MIC_CMA-4544PF-W"/>
 </packageinstances>
 </package3d>
-<package3d name="OSTVN02A150" urn="urn:adsk.eagle:package:12594929/1" type="box" library_version="133">
+<package3d name="OSTVN02A150" urn="urn:adsk.eagle:package:12594929/2" type="model" library_version="134">
 <packageinstances>
 <packageinstance name="OSTVN02A150"/>
 </packageinstances>
 </package3d>
-<package3d name="OSTVN02A150" urn="urn:adsk.eagle:package:12594919/2" type="box" library_version="133">
+<package3d name="OSTVN02A150" urn="urn:adsk.eagle:package:12594919/3" type="model" library_version="134">
 <packageinstances>
 <packageinstance name="OSTVN03A150"/>
 </packageinstances>
@@ -1142,7 +1142,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="OSTVN02A150" urn="urn:adsk.eagle:component:12594946/1" prefix="J" library_version="133">
+<deviceset name="OSTVN02A150" urn="urn:adsk.eagle:component:12594946/2" prefix="J" library_version="134">
 <gates>
 <gate name="G$1" symbol="F-2" x="0" y="0"/>
 </gates>
@@ -1153,7 +1153,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <connect gate="G$1" pin="2" pad="P$2"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:12594929/1"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:12594929/2"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1161,7 +1161,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="OSTVN03A150" urn="urn:adsk.eagle:component:12594947/1" prefix="J" library_version="133">
+<deviceset name="OSTVN03A150" urn="urn:adsk.eagle:component:12594947/2" prefix="J" library_version="134">
 <gates>
 <gate name="G$1" symbol="F-3" x="0" y="0"/>
 </gates>
@@ -1173,7 +1173,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <connect gate="G$1" pin="3" pad="P$3"/>
 </connects>
 <package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:12594919/2"/>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:12594919/3"/>
 </package3dinstances>
 <technologies>
 <technology name=""/>
@@ -1266,8 +1266,8 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C12" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="CAP-CER-SMD" device="0603" package3d_urn="urn:adsk.eagle:package:7587834/2" value="0.47u"/>
 <part name="GND15" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="J1" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="OSTVN02A150" device="" package3d_urn="urn:adsk.eagle:package:12594929/1"/>
-<part name="J2" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="OSTVN03A150" device="" package3d_urn="urn:adsk.eagle:package:12594919/2"/>
+<part name="J1" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="OSTVN02A150" device="" package3d_urn="urn:adsk.eagle:package:12594929/2"/>
+<part name="J2" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="OSTVN03A150" device="" package3d_urn="urn:adsk.eagle:package:12594919/3"/>
 <part name="GND16" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
