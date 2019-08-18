@@ -1,7 +1,7 @@
 {
     "Header": {
         "Comment": "All values are metric (mm)",
-        "CreationDate": "2019-08-18T03:57:52Z",
+        "CreationDate": "2019-08-18T17:44:18Z",
         "GenerationSoftware": {
             "Application": "EAGLE",
             "Vendor": "Autodesk",
@@ -13,7 +13,7 @@
         "BoardThickness": 1.57,
         "LayerNumber": 2,
         "Name": {
-            "ProjectId": "Reactrobe"
+            "ProjectId": "ReaXtrobe"
         },
         "Owner": "Ella Jameson <ellagjameson@gmail.com>",
         "Size": {
