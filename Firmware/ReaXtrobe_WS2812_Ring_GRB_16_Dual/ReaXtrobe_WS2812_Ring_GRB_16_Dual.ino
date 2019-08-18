@@ -1,5 +1,5 @@
 /*
- * Reactrobe - An Open-Source Pitch-Reactive Addressable RGB LED Controller
+ * ReaXtrobe - An Open-Source Pitch-Reactive Addressable RGB LED Controller
  * This code has been heavily modified and re-organized from some code
  * Pete Reiter made, "Spectrum analyzer". That code was itself taken
  * from an Adafruit sketch for the PICCOLO. I have added much scaling,
@@ -13,7 +13,7 @@
  * Hardware needed:
  * - Arduino Nano
  * - MAX9814 microphone module, OUT to A0
- * - WS2811 "christmas light" style 50x LED string, data on pin 2
+ * - 2x WS2812 circuar 16 led rings chained together, data on pin 2
  * - A 5V power supply with a bit of power capability, maybe >500mA
  */
 
@@ -29,7 +29,11 @@
 ////HARDWARE DEFINES////
 #define LED_PIN 2 // digital pin for programming neopixels, default = 2
 #define GAIN_PIN 3 // tristate pin for setting the gain, default = 3
-#define NUM_PIXELS 50 // number of lights, default = 50
+#define NUM_PIXELS 32 // number of lights, default = 32 (2x16)
+
+////ROTATION DEFINES////
+#define OFFSET_1 0 // rotation offset on first neopixel ring
+#define OFFSET_2 8 // rotation offset on second neopixel ring
 
 ////AUDIO DEFINES////
 #define GAIN 50 // The maximum mic gain for AGC, can be 40dB, 50dB, or 60dB, default = 50
@@ -137,10 +141,11 @@ static const uint8_t PROGMEM
     }; 
 
 ////MISC DECLARATION////
-Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_PIXELS, LED_PIN, NEO_RGB + NEO_KHZ800);
+Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_PIXELS, LED_PIN, NEO_GRB + NEO_KHZ800);
 int num_bins = (FHT_N/2) - 2 - IGNORE_TOP_BINS;
 int bins_per_group[NUM_PIXELS / 2];
 int avg_val[NUM_PIXELS / 2];
+int pos;
 volatile uint32_t samplePos = 0;     // Buffer position counter
 
 ////SETUP////
@@ -267,11 +272,13 @@ void loop() {
   //below. Bah, the framerate is fine anyway.
   for(int i = 0; i < NUM_PIXELS; i++) {
     if(i >= NUM_PIXELS / 2) {
-      strip.setPixelColor(i, pgm_read_dword(&colors[avg_val[i - (NUM_PIXELS / 2)]]));
+      
+      pos = ((NUM_PIXELS / 2) - 1) - ((i + OFFSET_1) % (NUM_PIXELS/2));
     }
     else {
-      strip.setPixelColor(i, pgm_read_dword(&colors[avg_val[((NUM_PIXELS / 2) - 1) - i]]));
+      pos = (i + OFFSET_2) % (NUM_PIXELS/2);
     }
+    strip.setPixelColor(i, pgm_read_dword(&colors[avg_val[pos]]));
   }
   
   cli();        // no interrupts while writing the neopixels
