@@ -1234,7 +1234,7 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <part name="C2" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="CAP-CER-SMD" device="0603" package3d_urn="urn:adsk.eagle:package:7587834/2" value="22p"/>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="RES-SMD" device="0603" package3d_urn="urn:adsk.eagle:package:7587835/3" value="1k"/>
-<part name="C3" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="CAP-CER-SMD" device="0603" package3d_urn="urn:adsk.eagle:package:7587834/2" value="100n"/>
+<part name="C3" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="CAP-CER-SMD" device="0603" package3d_urn="urn:adsk.eagle:package:7587834/2" value="0.1u"/>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C4" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="CAP-CER-SMD" device="0603" package3d_urn="urn:adsk.eagle:package:7587834/2" value="1u"/>
 <part name="C5" library="roomready" library_urn="urn:adsk.eagle:library:9911636" deviceset="CAP-CER-SMD" device="0603" package3d_urn="urn:adsk.eagle:package:7587834/2" value="1u"/>
@@ -1812,6 +1812,42 @@ Source: http://www.osram.convergy.de/ ... Lb_q993.pdf</description>
 <wire x1="248.92" y1="142.24" x2="246.38" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C12" gate="G$1" pin="2"/>
 <wire x1="246.38" y1="142.24" x2="246.38" y2="152.4" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$14" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PD4(XCK/T0)"/>
+<wire x1="182.88" y1="119.38" x2="193.04" y2="119.38" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PD5(T1)"/>
+<wire x1="182.88" y1="121.92" x2="193.04" y2="121.92" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PD6(AIN0)"/>
+<wire x1="182.88" y1="124.46" x2="193.04" y2="124.46" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PD7(AIN1)"/>
+<wire x1="182.88" y1="127" x2="193.04" y2="127" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PB0(ICP)"/>
+<wire x1="182.88" y1="149.86" x2="193.04" y2="149.86" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="U1" gate="G$1" pin="PB1(OC1A)"/>
+<wire x1="182.88" y1="152.4" x2="193.04" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
